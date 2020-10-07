@@ -15,6 +15,8 @@
 		F86B1616252E496E00C37EE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86B1614252E496E00C37EE8 /* LaunchScreen.storyboard */; };
 		F86B1621252E496F00C37EE8 /* RecentCommitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1620252E496F00C37EE8 /* RecentCommitsTests.swift */; };
 		F86B162C252E496F00C37EE8 /* RecentCommitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B162B252E496F00C37EE8 /* RecentCommitsUITests.swift */; };
+		F86B1644252E4E4800C37EE8 /* RecentCommitsvVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */; };
+		F86B164A252E518D00C37EE8 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1649252E518D00C37EE8 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F86B1627252E496F00C37EE8 /* RecentCommitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecentCommitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86B162B252E496F00C37EE8 /* RecentCommitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCommitsUITests.swift; sourceTree = "<group>"; };
 		F86B162D252E496F00C37EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCommitsvVewModel.swift; sourceTree = "<group>"; };
+		F86B1649252E518D00C37EE8 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				F86B1609252E496600C37EE8 /* AppDelegate.swift */,
 				F86B160B252E496600C37EE8 /* SceneDelegate.swift */,
+				F86B1648252E516E00C37EE8 /* Network */,
 				F86B163F252E4C7600C37EE8 /* RecentCommits */,
 				F86B160F252E496600C37EE8 /* Main.storyboard */,
 				F86B1612252E496E00C37EE8 /* Assets.xcassets */,
@@ -132,8 +137,17 @@
 			isa = PBXGroup;
 			children = (
 				F86B160D252E496600C37EE8 /* RecentCommitsViewController.swift */,
+				F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */,
 			);
 			path = RecentCommits;
+			sourceTree = "<group>";
+		};
+		F86B1648252E516E00C37EE8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F86B1649252E518D00C37EE8 /* NetworkClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86B160E252E496600C37EE8 /* RecentCommitsViewController.swift in Sources */,
+				F86B164A252E518D00C37EE8 /* NetworkClient.swift in Sources */,
+				F86B1644252E4E4800C37EE8 /* RecentCommitsvVewModel.swift in Sources */,
 				F86B160A252E496600C37EE8 /* AppDelegate.swift in Sources */,
 				F86B160C252E496600C37EE8 /* SceneDelegate.swift in Sources */,
 			);
