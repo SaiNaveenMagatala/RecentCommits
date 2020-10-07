@@ -70,5 +70,12 @@ extension RecentCommitsViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = displayModels[indexPath.row].hash
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if displayModels.count > 0 {
+            return displayModels[section].authorName
+        }
+        return ""
+    }
 }
 
