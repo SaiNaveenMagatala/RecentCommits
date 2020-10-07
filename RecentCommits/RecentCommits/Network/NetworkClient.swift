@@ -14,12 +14,13 @@ enum NetworkError: Error {
 }
 
 protocol NetworkClient {
-    func get<T: Decodable>(from urlStr: String, completion: @escaping (Result<T, NetworkError>) -> Void)
+    func get<T>(from urlStr: String,
+                completion: @escaping (Result<T, NetworkError>) -> Void) where T: Decodable
 }
 
 class NetworkClientImpl: NetworkClient {
-    func get<T: Decodable>(from urlStr: String, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        let urlStr = "https://api.github.com/repos/sainaveenmagatala/recentcommits/commits"
+    func get<T>(from urlStr: String,
+                 completion: @escaping (Result<T, NetworkError>) -> Void) where T: Decodable {
         guard let url = URL(string: urlStr) else {
             completion(.failure(.badURL))
             return

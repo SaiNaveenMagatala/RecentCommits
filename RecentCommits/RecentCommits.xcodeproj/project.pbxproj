@@ -13,21 +13,16 @@
 		F86B1611252E496600C37EE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86B160F252E496600C37EE8 /* Main.storyboard */; };
 		F86B1613252E496E00C37EE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86B1612252E496E00C37EE8 /* Assets.xcassets */; };
 		F86B1616252E496E00C37EE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86B1614252E496E00C37EE8 /* LaunchScreen.storyboard */; };
-		F86B1621252E496F00C37EE8 /* RecentCommitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1620252E496F00C37EE8 /* RecentCommitsTests.swift */; };
-		F86B162C252E496F00C37EE8 /* RecentCommitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B162B252E496F00C37EE8 /* RecentCommitsUITests.swift */; };
 		F86B1644252E4E4800C37EE8 /* RecentCommitsvVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */; };
 		F86B164A252E518D00C37EE8 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1649252E518D00C37EE8 /* NetworkClient.swift */; };
+		F86B165F252E57AA00C37EE8 /* RecentCommitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B165E252E57AA00C37EE8 /* RecentCommitsViewModelTests.swift */; };
+		F86B166E252E5A9800C37EE8 /* CommitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B166D252E5A9800C37EE8 /* CommitsService.swift */; };
+		F86B168E252E5C8000C37EE8 /* CommitsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B168D252E5C8000C37EE8 /* CommitsServiceTests.swift */; };
+		F86B1692252E5D5F00C37EE8 /* CommitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1691252E5D5F00C37EE8 /* CommitsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F86B161D252E496F00C37EE8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F86B15FE252E496600C37EE8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F86B1605252E496600C37EE8;
-			remoteInfo = RecentCommits;
-		};
-		F86B1628252E496F00C37EE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F86B15FE252E496600C37EE8 /* Project object */;
 			proxyType = 1;
@@ -46,13 +41,13 @@
 		F86B1615252E496E00C37EE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86B1617252E496E00C37EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86B161C252E496F00C37EE8 /* RecentCommitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecentCommitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F86B1620252E496F00C37EE8 /* RecentCommitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCommitsTests.swift; sourceTree = "<group>"; };
 		F86B1622252E496F00C37EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F86B1627252E496F00C37EE8 /* RecentCommitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecentCommitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F86B162B252E496F00C37EE8 /* RecentCommitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCommitsUITests.swift; sourceTree = "<group>"; };
-		F86B162D252E496F00C37EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCommitsvVewModel.swift; sourceTree = "<group>"; };
 		F86B1649252E518D00C37EE8 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		F86B165E252E57AA00C37EE8 /* RecentCommitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCommitsViewModelTests.swift; sourceTree = "<group>"; };
+		F86B166D252E5A9800C37EE8 /* CommitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsService.swift; sourceTree = "<group>"; };
+		F86B168D252E5C8000C37EE8 /* CommitsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsServiceTests.swift; sourceTree = "<group>"; };
+		F86B1691252E5D5F00C37EE8 /* CommitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +65,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F86B1624252E496F00C37EE8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,7 +73,6 @@
 			children = (
 				F86B1608252E496600C37EE8 /* RecentCommits */,
 				F86B161F252E496F00C37EE8 /* RecentCommitsTests */,
-				F86B162A252E496F00C37EE8 /* RecentCommitsUITests */,
 				F86B1607252E496600C37EE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +82,6 @@
 			children = (
 				F86B1606252E496600C37EE8 /* RecentCommits.app */,
 				F86B161C252E496F00C37EE8 /* RecentCommitsTests.xctest */,
-				F86B1627252E496F00C37EE8 /* RecentCommitsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +91,7 @@
 			children = (
 				F86B1609252E496600C37EE8 /* AppDelegate.swift */,
 				F86B160B252E496600C37EE8 /* SceneDelegate.swift */,
+				F86B166C252E5A7C00C37EE8 /* Services */,
 				F86B1648252E516E00C37EE8 /* Network */,
 				F86B163F252E4C7600C37EE8 /* RecentCommits */,
 				F86B160F252E496600C37EE8 /* Main.storyboard */,
@@ -118,19 +105,11 @@
 		F86B161F252E496F00C37EE8 /* RecentCommitsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F86B1620252E496F00C37EE8 /* RecentCommitsTests.swift */,
+				F86B1663252E57FF00C37EE8 /* Services */,
+				F86B165A252E575F00C37EE8 /* RecentCommits */,
 				F86B1622252E496F00C37EE8 /* Info.plist */,
 			);
 			path = RecentCommitsTests;
-			sourceTree = "<group>";
-		};
-		F86B162A252E496F00C37EE8 /* RecentCommitsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F86B162B252E496F00C37EE8 /* RecentCommitsUITests.swift */,
-				F86B162D252E496F00C37EE8 /* Info.plist */,
-			);
-			path = RecentCommitsUITests;
 			sourceTree = "<group>";
 		};
 		F86B163F252E4C7600C37EE8 /* RecentCommits */ = {
@@ -138,6 +117,7 @@
 			children = (
 				F86B160D252E496600C37EE8 /* RecentCommitsViewController.swift */,
 				F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */,
+				F86B1691252E5D5F00C37EE8 /* CommitsModel.swift */,
 			);
 			path = RecentCommits;
 			sourceTree = "<group>";
@@ -148,6 +128,30 @@
 				F86B1649252E518D00C37EE8 /* NetworkClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F86B165A252E575F00C37EE8 /* RecentCommits */ = {
+			isa = PBXGroup;
+			children = (
+				F86B165E252E57AA00C37EE8 /* RecentCommitsViewModelTests.swift */,
+			);
+			path = RecentCommits;
+			sourceTree = "<group>";
+		};
+		F86B1663252E57FF00C37EE8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F86B168D252E5C8000C37EE8 /* CommitsServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F86B166C252E5A7C00C37EE8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F86B166D252E5A9800C37EE8 /* CommitsService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,24 +192,6 @@
 			productReference = F86B161C252E496F00C37EE8 /* RecentCommitsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F86B1626252E496F00C37EE8 /* RecentCommitsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F86B1636252E496F00C37EE8 /* Build configuration list for PBXNativeTarget "RecentCommitsUITests" */;
-			buildPhases = (
-				F86B1623252E496F00C37EE8 /* Sources */,
-				F86B1624252E496F00C37EE8 /* Frameworks */,
-				F86B1625252E496F00C37EE8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F86B1629252E496F00C37EE8 /* PBXTargetDependency */,
-			);
-			name = RecentCommitsUITests;
-			productName = RecentCommitsUITests;
-			productReference = F86B1627252E496F00C37EE8 /* RecentCommitsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,10 +206,7 @@
 					};
 					F86B161B252E496F00C37EE8 = {
 						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = F86B1605252E496600C37EE8;
-					};
-					F86B1626252E496F00C37EE8 = {
-						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 						TestTargetID = F86B1605252E496600C37EE8;
 					};
 				};
@@ -243,7 +226,6 @@
 			targets = (
 				F86B1605252E496600C37EE8 /* RecentCommits */,
 				F86B161B252E496F00C37EE8 /* RecentCommitsTests */,
-				F86B1626252E496F00C37EE8 /* RecentCommitsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,13 +248,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F86B1625252E496F00C37EE8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86B166E252E5A9800C37EE8 /* CommitsService.swift in Sources */,
 				F86B160E252E496600C37EE8 /* RecentCommitsViewController.swift in Sources */,
+				F86B1692252E5D5F00C37EE8 /* CommitsModel.swift in Sources */,
 				F86B164A252E518D00C37EE8 /* NetworkClient.swift in Sources */,
 				F86B1644252E4E4800C37EE8 /* RecentCommitsvVewModel.swift in Sources */,
 				F86B160A252E496600C37EE8 /* AppDelegate.swift in Sources */,
@@ -292,15 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86B1621252E496F00C37EE8 /* RecentCommitsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F86B1623252E496F00C37EE8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F86B162C252E496F00C37EE8 /* RecentCommitsUITests.swift in Sources */,
+				F86B168E252E5C8000C37EE8 /* CommitsServiceTests.swift in Sources */,
+				F86B165F252E57AA00C37EE8 /* RecentCommitsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +281,6 @@
 			isa = PBXTargetDependency;
 			target = F86B1605252E496600C37EE8 /* RecentCommits */;
 			targetProxy = F86B161D252E496F00C37EE8 /* PBXContainerItemProxy */;
-		};
-		F86B1629252E496F00C37EE8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F86B1605252E496600C37EE8 /* RecentCommits */;
-			targetProxy = F86B1628252E496F00C37EE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,6 +463,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CCW89VTSVA;
 				INFOPLIST_FILE = RecentCommitsTests/Info.plist;
@@ -509,6 +475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = naveenmagatala.RecentCommitsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecentCommits.app/RecentCommits";
@@ -520,6 +487,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CCW89VTSVA;
 				INFOPLIST_FILE = RecentCommitsTests/Info.plist;
@@ -534,46 +502,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecentCommits.app/RecentCommits";
-			};
-			name = Release;
-		};
-		F86B1637252E496F00C37EE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CCW89VTSVA;
-				INFOPLIST_FILE = RecentCommitsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = naveenmagatala.RecentCommitsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RecentCommits;
-			};
-			name = Debug;
-		};
-		F86B1638252E496F00C37EE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CCW89VTSVA;
-				INFOPLIST_FILE = RecentCommitsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = naveenmagatala.RecentCommitsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RecentCommits;
 			};
 			name = Release;
 		};
@@ -603,15 +531,6 @@
 			buildConfigurations = (
 				F86B1634252E496F00C37EE8 /* Debug */,
 				F86B1635252E496F00C37EE8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F86B1636252E496F00C37EE8 /* Build configuration list for PBXNativeTarget "RecentCommitsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F86B1637252E496F00C37EE8 /* Debug */,
-				F86B1638252E496F00C37EE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
