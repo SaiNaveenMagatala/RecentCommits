@@ -9,6 +9,7 @@ import UIKit
 
 class RecentCommitsViewController: UIViewController {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
     private let viewModel = RecentCommitsViewModel()
     private let activityIndicator = UIActivityIndicatorView()
@@ -65,17 +66,17 @@ extension RecentCommitsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCommitsTableViewCell") else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = displayModels[indexPath.row].message
-        cell.textLabel?.numberOfLines = 2
-        cell.detailTextLabel?.text = displayModels[indexPath.row].hash
+        cell.textLabel?.text = displayModels[indexPath.row].authorName.capitalized
+        let shortHash = "#\(displayModels[indexPath.row].hash.lastFourChars)"
+        cell.detailTextLabel?.text = displayModels[indexPath.row].message + shortHash
+        cell.detailTextLabel?.numberOfLines = 0
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if displayModels.count > 0 {
-            return displayModels[section].authorName
-        }
-        return ""
+}
+
+private extension String {
+    var lastFourChars: String {
+        String(self.suffix(4))
     }
 }
 
