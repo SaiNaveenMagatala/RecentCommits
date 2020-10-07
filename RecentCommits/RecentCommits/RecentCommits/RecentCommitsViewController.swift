@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecentCommitsViewController.swift
 //  RecentCommits
 //
 //  Created by Naveen Magatala on 10/7/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecentCommitsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
