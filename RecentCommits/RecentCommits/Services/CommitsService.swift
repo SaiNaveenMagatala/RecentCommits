@@ -11,7 +11,8 @@ protocol CommitsService {
     func fetchRecentCommits(completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void)
 }
 
-class CommitsServiceImpl {
+class CommitsServiceImpl: CommitsService {
+    
     let networkClient = NetworkClientImpl()
     private let fetchUrlStr = "https://api.github.com/repos/sainaveenmagatala/recentcommits/commits"
     
