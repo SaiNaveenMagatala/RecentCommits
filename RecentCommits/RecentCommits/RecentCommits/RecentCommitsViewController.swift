@@ -11,9 +11,11 @@ class RecentCommitsViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     private let viewModel = RecentCommitsViewModel()
+    private let activityIndicator = UIActivityIndicatorView()
     private var displayModels: [CommitsDisplayModel] = [] {
         didSet {
             DispatchQueue.main.async {
+                self.hideLoadingIndicator()
                 self.tableView.reloadData()
             }
         }
@@ -29,14 +31,28 @@ class RecentCommitsViewController: UIViewController {
     
     private func bindView() {
         tableView.dataSource = self
+        tableView.addSubview(activityIndicator)
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
     }
     
     private func bindViewModel() {
+        showLoadingIndicator()
         viewModel.fetchCommits { [weak self] result in
             if case let .success(models) = result {
                 self?.displayModels = models
             }
         }
+    }
+    
+    private func showLoadingIndicator() {
+        tableView.alpha = 0.7
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideLoadingIndicator() {
+        tableView.alpha = 1
+        activityIndicator.stopAnimating()
     }
 }
 
