@@ -19,9 +19,18 @@ class CommitsServiceTests: XCTestCase {
         subject = CommitsServiceImpl()
     }
     
-    func testWhenSuccessResponseReceived() {
+    func testWhenFetchingCommitsFromAPI() {
+        let expectation = XCTestExpectation(description: "waiting to fetch commits")
         subject.fetchRecentCommits { result in
-            
+            switch result {
+            case let .success(models):
+                XCTAssertTrue(!models.isEmpty)
+            case let .failure(error):
+                XCTFail("fetch commits API failed with error \(error)")
+            }
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 2)
     }
 }
