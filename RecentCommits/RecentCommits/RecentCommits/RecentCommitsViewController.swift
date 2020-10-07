@@ -23,6 +23,8 @@ class RecentCommitsViewController: UIViewController {
         super.viewDidLoad()
         bindView()
         bindViewModel()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Recent Commits"
     }
     
     private func bindView() {
@@ -36,8 +38,6 @@ class RecentCommitsViewController: UIViewController {
             }
         }
     }
-
-
 }
 
 extension RecentCommitsViewController: UITableViewDataSource {
