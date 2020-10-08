@@ -20,7 +20,6 @@ class CommitsServiceImpl: CommitsService {
     func fetchRecentCommits(segment: Segment,
                             completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void) {
         let urlStr = String(format: rawURLStr, segment.user, segment.repo)
-        print(urlStr)
         networkClient.get(from: urlStr, completion: completion)
     }
 }

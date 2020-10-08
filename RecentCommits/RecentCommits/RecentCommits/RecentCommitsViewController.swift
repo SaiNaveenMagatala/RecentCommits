@@ -45,10 +45,12 @@ class RecentCommitsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     private let viewModel = RecentCommitsViewModel()
     private let activityIndicator = UIActivityIndicatorView()
+    private let refreshControl = UIRefreshControl()
     private var displayModels: [CommitsDisplayModel] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.hideLoadingIndicator()
+                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             }
         }
@@ -65,10 +67,13 @@ class RecentCommitsViewController: UIViewController {
     private func bindView() {
         tableView.dataSource = self
         tableView.addSubview(activityIndicator)
+        tableView.refreshControl = refreshControl
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
         segmentControl.setTitle(Segment.thisApp.title, forSegmentAt: 0)
         segmentControl.setTitle(Segment.pythonAlgos.title, forSegmentAt: 1)
+        
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
     }
     
     private func fetchCommits(segment: Segment) {
@@ -92,6 +97,10 @@ class RecentCommitsViewController: UIViewController {
     private func hideLoadingIndicator() {
         tableView.alpha = 1
         activityIndicator.stopAnimating()
+    }
+    
+    @objc private func pullToRefresh() {
+        valueChangedForSegment(segmentControl)
     }
 }
 
