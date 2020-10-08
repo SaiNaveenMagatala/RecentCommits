@@ -7,38 +7,6 @@
 
 import UIKit
 
-enum Segment: Int {
-    case thisApp
-    case pythonAlgos
-    
-    var title: String {
-        switch self {
-        case .thisApp:
-            return "This App"
-        case .pythonAlgos:
-            return "Algorithms in Python"
-        }
-    }
-    
-    var user: String {
-        switch self {
-        case .thisApp:
-            return "sainaveenmagatala"
-        case .pythonAlgos:
-            return "TheAlgorithms"
-        }
-    }
-    
-    var repo: String {
-        switch self {
-        case .thisApp:
-            return "recentcommits"
-        case .pythonAlgos:
-            return "Python"
-        }
-    }
-}
-
 class RecentCommitsViewController: UIViewController {
 
     @IBOutlet weak var segmentControl: UISegmentedControl!

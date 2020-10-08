@@ -21,6 +21,7 @@
 		F86B1692252E5D5F00C37EE8 /* CommitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1691252E5D5F00C37EE8 /* CommitsModel.swift */; };
 		F86B1696252E628800C37EE8 /* CommitsDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1695252E628800C37EE8 /* CommitsDisplayModel.swift */; };
 		F86B169A252E633300C37EE8 /* FakeCommitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B1699252E633300C37EE8 /* FakeCommitsService.swift */; };
+		F86B169E252E914500C37EE8 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B169D252E914500C37EE8 /* Segment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F86B1691252E5D5F00C37EE8 /* CommitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsModel.swift; sourceTree = "<group>"; };
 		F86B1695252E628800C37EE8 /* CommitsDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsDisplayModel.swift; sourceTree = "<group>"; };
 		F86B1699252E633300C37EE8 /* FakeCommitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCommitsService.swift; sourceTree = "<group>"; };
+		F86B169D252E914500C37EE8 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				F86B1643252E4E4700C37EE8 /* RecentCommitsvVewModel.swift */,
 				F86B1691252E5D5F00C37EE8 /* CommitsModel.swift */,
 				F86B1695252E628800C37EE8 /* CommitsDisplayModel.swift */,
+				F86B169D252E914500C37EE8 /* Segment.swift */,
 			);
 			path = RecentCommits;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86B166E252E5A9800C37EE8 /* CommitsService.swift in Sources */,
+				F86B169E252E914500C37EE8 /* Segment.swift in Sources */,
 				F86B160E252E496600C37EE8 /* RecentCommitsViewController.swift in Sources */,
 				F86B1692252E5D5F00C37EE8 /* CommitsModel.swift in Sources */,
 				F86B164A252E518D00C37EE8 /* NetworkClient.swift in Sources */,
