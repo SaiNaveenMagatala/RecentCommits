@@ -15,8 +15,9 @@ class RecentCommitsViewModel {
         self.commitsService = commitsService
     }
     
-    func fetchCommits(completion: @escaping (Result<[CommitsDisplayModel], NetworkError>) -> Void) {
-        commitsService.fetchRecentCommits { result in
+    func fetchCommits(segment: Segment,
+                      completion: @escaping (Result<[CommitsDisplayModel], NetworkError>) -> Void) {
+        commitsService.fetchRecentCommits(segment: segment) { result in
             switch result {
             case let .success(models):
                 completion(.success(models.map { CommitsDisplayModel(authorName: $0.commit.author.name,

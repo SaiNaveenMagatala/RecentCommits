@@ -7,6 +7,38 @@
 
 import UIKit
 
+enum Segment: Int {
+    case thisApp
+    case pythonAlgos
+    
+    var title: String {
+        switch self {
+        case .thisApp:
+            return "This App"
+        case .pythonAlgos:
+            return "Algorithms in Python"
+        }
+    }
+    
+    var user: String {
+        switch self {
+        case .thisApp:
+            return "sainaveenmagatala"
+        case .pythonAlgos:
+            return "TheAlgorithms"
+        }
+    }
+    
+    var repo: String {
+        switch self {
+        case .thisApp:
+            return "recentcommits"
+        case .pythonAlgos:
+            return "Python"
+        }
+    }
+}
+
 class RecentCommitsViewController: UIViewController {
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -25,7 +57,7 @@ class RecentCommitsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindView()
-        bindViewModel()
+        fetchCommits(segment: .thisApp)
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Recent Commits"
     }
@@ -35,11 +67,13 @@ class RecentCommitsViewController: UIViewController {
         tableView.addSubview(activityIndicator)
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
+        segmentControl.setTitle(Segment.thisApp.title, forSegmentAt: 0)
+        segmentControl.setTitle(Segment.pythonAlgos.title, forSegmentAt: 1)
     }
     
-    private func bindViewModel() {
+    private func fetchCommits(segment: Segment) {
         showLoadingIndicator()
-        viewModel.fetchCommits { [weak self] result in
+        viewModel.fetchCommits(segment: segment) { [weak self] result in
             if case let .success(models) = result {
                 self?.displayModels = models
             }
@@ -49,6 +83,10 @@ class RecentCommitsViewController: UIViewController {
     private func showLoadingIndicator() {
         tableView.alpha = 0.7
         activityIndicator.startAnimating()
+    }
+    
+    @IBAction func valueChangedForSegment(_ sender: UISegmentedControl) {
+        fetchCommits(segment: Segment(rawValue: sender.selectedSegmentIndex) ?? .thisApp)
     }
     
     private func hideLoadingIndicator() {
@@ -67,16 +105,10 @@ extension RecentCommitsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.textLabel?.text = displayModels[indexPath.row].authorName.capitalized
-        let shortHash = "#\(displayModels[indexPath.row].hash.lastFourChars)"
-        cell.detailTextLabel?.text = displayModels[indexPath.row].message + shortHash
+        let hash = "\n\(displayModels[indexPath.row].hash)"
+        cell.detailTextLabel?.text = displayModels[indexPath.row].message + hash
         cell.detailTextLabel?.numberOfLines = 0
         return cell
-    }
-}
-
-private extension String {
-    var lastFourChars: String {
-        String(self.suffix(4))
     }
 }
 

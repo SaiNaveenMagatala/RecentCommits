@@ -8,16 +8,19 @@
 import Foundation
 
 protocol CommitsService {
-    func fetchRecentCommits(completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void)
+    func fetchRecentCommits(segment: Segment,
+                            completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void)
 }
 
 class CommitsServiceImpl: CommitsService {
     
     let networkClient = NetworkClientImpl()
-    private let fetchUrlStr = "https://api.github.com/repos/sainaveenmagatala/recentcommits/commits"
-    private let newComms = "https://api.github.com/repos/TheAlgorithms/Python/commits"
+    private let rawURLStr = "https://api.github.com/repos/%@/%@/commits"
     
-    func fetchRecentCommits(completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void) {
-        networkClient.get(from: newComms, completion: completion)
+    func fetchRecentCommits(segment: Segment,
+                            completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void) {
+        let urlStr = String(format: rawURLStr, segment.user, segment.repo)
+        print(urlStr)
+        networkClient.get(from: urlStr, completion: completion)
     }
 }

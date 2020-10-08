@@ -14,7 +14,8 @@ class FakeCommitsService: CommitsService {
     var fakeCompletion: ((Result<[CommitsModel], NetworkError>) -> Void)!
     var isFetchRecentCommitsCalled = false
     
-    func fetchRecentCommits(completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void) {
+    func fetchRecentCommits(segment: Segment,
+                            completion: @escaping (Result<[CommitsModel], NetworkError>) -> Void) {
         fakeCompletion = completion
         isFetchRecentCommitsCalled = true
     }

@@ -23,7 +23,7 @@ class RecentCommitsViewModelTests: XCTestCase {
     
     func testWhenFetchCommitsCalled() {
         // Given // When
-        subject.fetchCommits() { _ in }
+        subject.fetchCommits(segment: .thisApp) { _ in }
         // Then
         XCTAssertTrue(fakeCommitsService.isFetchRecentCommitsCalled)
     }
@@ -35,7 +35,7 @@ class RecentCommitsViewModelTests: XCTestCase {
                                                              message: "A message"))
         // When
         var receivedModels: [CommitsDisplayModel]?
-        subject.fetchCommits { result in
+        subject.fetchCommits(segment: .thisApp) { result in
             if case let .success(models) = result {
                 receivedModels = models
             }

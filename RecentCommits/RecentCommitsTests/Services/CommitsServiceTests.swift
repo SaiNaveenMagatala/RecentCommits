@@ -21,7 +21,7 @@ class CommitsServiceTests: XCTestCase {
     
     func testWhenFetchingCommitsFromAPI() {
         let expectation = XCTestExpectation(description: "waiting to fetch commits")
-        subject.fetchRecentCommits { result in
+        subject.fetchRecentCommits(segment: .thisApp) { result in
             switch result {
             case let .success(models):
                 XCTAssertTrue(!models.isEmpty)
